@@ -1,6 +1,7 @@
-import bar from './bar';
+import bar from './bar'
+const foo = require('./foo')
 
-bar();
-
+bar()
+foo.test()
 document.getElementById('app').innerHTML = 'Hello, webpack'
 

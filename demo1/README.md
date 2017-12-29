@@ -25,9 +25,17 @@
       export default function bar() {
         console.log('bar()')
       }
-    2). app.js
+    2). foo.js
+      module.exports = {
+        test () {
+          console.log('foo test()')
+        }
+      }
+    3). app.js
       import bar from './bar'
+      const foo = require('./foo')
       bar()
+      foo.test()
       document.getElementById('app').innerHTML = 'Hello, webpack'
     3). page.html
       <html>

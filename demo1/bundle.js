@@ -71,8 +71,10 @@
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__bar__ = __webpack_require__(1);
 
+const foo = __webpack_require__(2)
 
-Object(__WEBPACK_IMPORTED_MODULE_0__bar__["a" /* default */])();
+Object(__WEBPACK_IMPORTED_MODULE_0__bar__["a" /* default */])()
+foo.test()
 
 document.getElementById('app').innerHTML = 'Hello, webpack'
 
@@ -86,6 +88,16 @@ document.getElementById('app').innerHTML = 'Hello, webpack'
 /* harmony export (immutable) */ __webpack_exports__["a"] = bar;
 function bar() {
   console.log('bar()')
+}
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports) {
+
+module.exports = {
+  test () {
+    console.log('foo test()')
+  }
 }
 
 /***/ })

@@ -74,7 +74,6 @@
           output: {
             path: resolve('dist'),
             filename: '[name].js',
-            publicPath: '/'
           },
         
           // 模块加载

@@ -179,7 +179,7 @@
     npm run build
     npm install -g serve
     serve dist (npm run server)
-    访问: http://localhost:9000
+    访问: http://localhost:5000
 
 ## 6. 待解决问题
     1. 修改代码, 如何能立即看到最新的效果?

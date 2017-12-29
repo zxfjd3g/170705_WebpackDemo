@@ -1,6 +1,3 @@
-/*
-开发环境的配置
- */
 const merge = require('webpack-merge')
 const baseConfig = require('./webpack.base.conf')
 

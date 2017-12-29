@@ -6,18 +6,17 @@ function resolve(dir) {
 }
 
 module.exports = {
-  entry: {
-    app: './src/index.js'
-  },
-
+  // 入口
+  entry: './src/index.js',
+  // 出口
   output: {
     path: resolve('dist'),
-    filename: '[name].js'
+    filename: 'bundle.js'
   },
-
+  // 模块加载器
   module: {
     rules: [
-      // js(es6)
+      // es6-->es5
       {
         test: /\.js$/,
         use: 'babel-loader',
@@ -26,16 +25,17 @@ module.exports = {
       // css
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader']
+        use: ['style-loader', 'css-loader'],
       },
+
       // 图片
       {
-        test: /\.(jpe?g|png|gif|svg)$/,
-        use: ['file-loader']
+        test: /\.(jpg|png|gif|svg)$/,
+        loader: 'file-loader',
       }
     ]
   },
-
+  //插件
   plugins: [
     new HtmlPlugin({
       template: 'index.html',
